@@ -18,23 +18,32 @@ namespace s649_SmallResource
         {
             public const string GUID = "s649_SmallResource";
             public const string MOD_TITLE = "Small Resource";
-            public const string MOD_VERSION = "0.0.0";
+            public const string MOD_VERSION = "0.1.0";
         }
 
         private void Start()
         {
             //LoadConfig();
             //new Harmony(this.GetType().Name).PatchAll();
-            ChangeComponents("plank", new[] { "logSmall" });
-            ChangeComponents("cutstone", new[] { "rockSmall" });
-            ChangeComponents("brick", new[] { "claySmall" });
-            ChangeComponents("glass", new[] { "fragmentSmall" });
+            ChangeComponents("plank", new[] { "log_small" });
+            ChangeComponents("cutstone", new[] { "rock_small" });
+            ChangeComponents("brick", new[] { "clay_small" });
+            ChangeComponents("glass", new[] { "fragment_small" });
+            //ShowCompo("cage");
+            //ShowCompo("potion_empty");
+            //ChangeComponents("potion_empty", new[] { "glass/1", "log@carbone/1|logSmall" });
         }
         private void ChangeComponents(string idThing, string[] comThings)
         {
-            Debug.Log($"SR:Components:plank:{EClass.sources.things.map[idThing].components}");
+            //ShowCompo(idThing);
             EClass.sources.things.map[idThing].components = comThings;
-            Debug.Log($"SR:ChangeComponents:plank:{EClass.sources.things.map[idThing].components}");
+            ShowCompo(idThing);
+        }
+        private void ShowCompo(string idThing) 
+        {
+            string text;// = string.Join(", ", comThings);
+            text = string.Join(", ", EClass.sources.things.map[idThing].components);
+            Debug.Log($"SR:Components:{idThing}:{text}");
         }
         /*
         private void LoadConfig() 
