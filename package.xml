@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Meta>
+  <title>Small Resource</title>
+  <id>s649_SmallResource</id>
+  <author>sig649</author>
+  <builtin>false</builtin>
+  <loadPriority>100</loadPriority>
+  <version>0.23.307</version>
+  <description>
+  </description>
+  <tags>Balance,Item</tags>
+</Meta>
