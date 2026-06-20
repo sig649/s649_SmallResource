@@ -18,7 +18,7 @@ namespace s649_SmallResource
         {
             public const string GUID = "s649_SmallResource";
             public const string MOD_TITLE = "Small Resource";
-            public const string MOD_VERSION = "0.1.0";
+            public const string MOD_VERSION = "0.2";
         }
 
         private void Start()
@@ -29,7 +29,10 @@ namespace s649_SmallResource
             ChangeComponents("cutstone", new[] { "rock_small" });
             ChangeComponents("brick", new[] { "clay_small" });
             ChangeComponents("glass", new[] { "fragment_small" });
-            //ShowCompo("cage");
+            ShowCompo("figure");
+            ShowCompo("figure2");
+            ChangeComponents("figure", new[] { "log_small" });
+            ChangeComponents("figure2", new[] { "log_small" });
             //ShowCompo("potion_empty");
             //ChangeComponents("potion_empty", new[] { "glass/1", "log@carbone/1|logSmall" });
         }
